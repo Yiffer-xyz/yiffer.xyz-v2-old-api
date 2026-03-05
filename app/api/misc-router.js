@@ -474,7 +474,7 @@ export default class MiscRouter extends BaseRouter {
       }
     }
     else if (actionType === 'Keyword') {
-      if (actionDescription.x.match(/(Add \d* to)|(Remove \d* from)/)) {
+      if (actionDescription.match(/(Add \d* to)|(Remove \d* from)/)) {
         return 5 * getNumberOfKeywordsAdded(actionDescription, false)
       }
       if (actionDescription.includes('Add')) {
